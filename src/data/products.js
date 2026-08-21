@@ -28,7 +28,7 @@
     name: "Monitor HDMI 24 pulgadas",
     description: "Monitor Full HD 1920x1080 IPS",
     price: 450000,
-    image: "/images/placeholder-4.svg",
+    images: ["/images/monitor-1.png", "/images/monitor-2.png"],
     available: false
   },
   {

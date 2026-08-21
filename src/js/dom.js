@@ -13,12 +13,9 @@ function statusPill(available) {
 export function createProductCard(product) {
   const link = generateProductWhatsAppLink(product);
   const label = product.available ? 'Comprar por WhatsApp' : 'Consultar disponibilidad';
-  const image = assetUrl(product.image);
   return `
     <article class="card group reveal">
-      <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-        <img src="${image}" alt="${product.name}" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
-      </div>
+      ${productMedia(product)}
       <div class="flex flex-1 flex-col p-5">
         <div class="flex items-start justify-between gap-3">
           <h3 class="font-semibold leading-snug text-slate-900">${product.name}</h3>
@@ -43,6 +40,64 @@ export function createServiceCard(service) {
       <p class="mt-3 text-sm font-semibold text-blue-600">${service.price}</p>
       <a href="${link}" target="_blank" rel="noopener" class="btn-whatsapp mt-5 w-full !px-4 !py-2.5 !text-xs">${WA_ICON}Consultar</a>
     </article>`;
+}
+
+function productMedia(product) {
+  const images = Array.isArray(product.images) && product.images.length ? product.images : [product.image];
+  if (images.length === 1) {
+    return `
+      <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+        <img src="${assetUrl(images[0])}" alt="${product.name}" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+      </div>`;
+  }
+  const slides = images
+    .map((src, i) => `<img src="${assetUrl(src)}" alt="${product.name} — foto ${i + 1}" ${i ? 'loading="lazy"' : ''} draggable="false" class="h-full w-full shrink-0 object-cover">`)
+    .join('');
+  const dots = images
+    .map((_, i) => `<button type="button" data-goto="${i}" aria-label="Ir a la foto ${i + 1}" class="h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'w-4 bg-white' : 'w-1.5 bg-white/50'}"></button>`)
+    .join('');
+  return `
+    <div data-carousel class="relative aspect-[4/3] touch-pan-y overflow-hidden bg-slate-100">
+      <div data-track class="flex h-full w-full transition-transform duration-300 ease-out">${slides}</div>
+      <button type="button" data-prev aria-label="Foto anterior" class="absolute left-2 top-1/2 z-10 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur transition hover:bg-black/60 focus:opacity-100 group-hover:opacity-100">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button type="button" data-next aria-label="Foto siguiente" class="absolute right-2 top-1/2 z-10 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur transition hover:bg-black/60 focus:opacity-100 group-hover:opacity-100">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+      <div class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5">${dots}</div>
+    </div>`;
+}
+
+export function setupCarousels(root = document) {
+  root.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector('[data-track]');
+    const dots = [...carousel.querySelectorAll('[data-goto]')];
+    if (!track || !dots.length) return;
+    let index = 0;
+    const total = dots.length;
+    const go = (target) => {
+      index = Math.max(0, Math.min(total - 1, target));
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((dot, di) => {
+        dot.classList.toggle('w-4', di === index);
+        dot.classList.toggle('bg-white', di === index);
+        dot.classList.toggle('w-1.5', di !== index);
+        dot.classList.toggle('bg-white/50', di !== index);
+      });
+    };
+    dots.forEach((dot) => dot.addEventListener('click', () => go(Number(dot.dataset.goto))));
+    carousel.querySelector('[data-prev]')?.addEventListener('click', () => go(index - 1));
+    carousel.querySelector('[data-next]')?.addEventListener('click', () => go(index + 1));
+    let startX = null;
+    carousel.addEventListener('pointerdown', (e) => { startX = e.clientX; });
+    carousel.addEventListener('pointerup', (e) => {
+      if (startX === null) return;
+      const delta = e.clientX - startX;
+      startX = null;
+      if (Math.abs(delta) > 30) go(delta < 0 ? index + 1 : index - 1);
+    });
+  });
 }
 
 export function renderProducts(container, items) {
