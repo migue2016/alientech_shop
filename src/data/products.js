@@ -78,6 +78,14 @@
     price: 320000,
     image: "/images/monitor2-1.png",
     available: true
+  },
+  {
+    id: 11,
+    name: "Mouse G1",
+    description: "Mouse gaming G1 con luces RGB",
+    price: 85000,
+    images: ["/images/mouse-g1-1.png", "/images/mouse-g1-2.png", "/images/mouse-g1-3.png"],
+    available: true
   }
 ];
 
