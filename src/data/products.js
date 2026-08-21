@@ -12,7 +12,7 @@
     name: "Cable HDMI 2.1 Premium 3M",
     description: "Cable HDMI 2.1 alta velocidad 4K 120Hz",
     price: 65000,
-    image: "/images/placeholder-2.svg",
+    image: "/images/cable_hdmi.png",
     available: true
   },
   {
