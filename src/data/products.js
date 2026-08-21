@@ -86,6 +86,14 @@
     price: 85000,
     images: ["/images/mouse-g1-3.png", "/images/mouse-g1-1.png", "/images/mouse-g1-2.png"],
     available: true
+  },
+  {
+    id: 12,
+    name: "Ratón Inalámbrico",
+    description: "Ratón inalámbrico silencioso plug and play",
+    price: 60000,
+    images: ["/images/raton-1.png", "/images/raton-2.png"],
+    available: true
   }
 ];
 
