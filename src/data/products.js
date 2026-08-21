@@ -28,7 +28,7 @@
     name: "Monitor HDMI 24 pulgadas",
     description: "Monitor Full HD 1920x1080 IPS",
     price: 450000,
-    images: ["/images/monitor-1.png", "/images/monitor-2.png", "/images/monitor-3.png"],
+    images: ["/images/monitor-1.png", "/images/monitor-2.png"],
     available: false
   },
   {
@@ -69,6 +69,14 @@
     description: "Audífonos inalámbricos Xiaomi con Bluetooth",
     price: 99000,
     image: "/images/audifonos-xiaomi.png",
+    available: true
+  },
+  {
+    id: 10,
+    name: "Monitor 22 pulgadas",
+    description: "Monitor HD ideal para oficina y hogar",
+    price: 320000,
+    image: "/images/monitor2-1.png",
     available: true
   }
 ];
