@@ -1,0 +1,62 @@
+export const services = [
+  {
+    id: 1,
+    icon: "🔧",
+    name: "Mantenimiento de Computadores",
+    description: "Limpieza y optimización de equipos",
+    price: "Desde $80.000"
+  },
+  {
+    id: 2,
+    icon: "💾",
+    name: "Instalación de Sistemas",
+    description: "Instalación de Windows, Linux o macOS",
+    price: "Desde $60.000"
+  },
+  {
+    id: 3,
+    icon: "🌐",
+    name: "Configuración de Redes",
+    description: "Instalación y optimización de redes",
+    price: "Consultar"
+  },
+  {
+    id: 4,
+    icon: "🛡️",
+    name: "Soporte Técnico Remoto",
+    description: "Asistencia técnica vía remoto",
+    price: "Desde $50.000/hora"
+  },
+  {
+    id: 5,
+    icon: "📹",
+    name: "Instalación de Cámaras",
+    description: "Sistemas de vigilancia con acceso remoto",
+    price: "Consultar"
+  },
+  {
+    id: 6,
+    icon: "⚡",
+    name: "Optimización de Computadores",
+    description: "Mejora del rendimiento y velocidad",
+    price: "Desde $100.000"
+  },
+  {
+    id: 7,
+    icon: "🖨️",
+    name: "Configuración de Impresoras",
+    description: "Instalación e integración en red",
+    price: "Desde $40.000"
+  },
+  {
+    id: 8,
+    icon: "📱",
+    name: "Recuperación de Datos",
+    description: "Recuperación de discos y USB",
+    price: "Consultar"
+  }
+];
+
+export function getServiceById(id) {
+  return services.find(s => s.id === id);
+}

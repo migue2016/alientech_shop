@@ -1,0 +1,30 @@
+export const WHATSAPP_NUMBER = "573XXXXXXXXX";
+export const WHATSAPP_COUNTRY_CODE = "57";
+
+export const CONTACT_INFO = {
+  whatsapp: WHATSAPP_NUMBER,
+  email: "contacto@alientech.com",
+  phone: "+57 (1) 234-5678",
+  city: "Armenia, Quindío",
+  address: "Calle Principal, Armenia",
+  businessHours: {
+    weekday: "8:00 AM - 6:00 PM",
+    saturday: "9:00 AM - 4:00 PM",
+    sunday: "Cerrado"
+  }
+};
+
+export const COMPANY = {
+  name: "Alientech",
+  tagline: "Soluciones tecnológicas para tu día a día",
+  description: "Productos tecnológicos y servicios profesionales.",
+  year: new Date().getFullYear()
+};
+
+export const SOCIAL_MEDIA = {
+  whatsapp: `https://wa.me/${WHATSAPP_NUMBER}`,
+  facebook: "https://facebook.com",
+  instagram: "https://instagram.com",
+  twitter: "https://twitter.com",
+  linkedin: "https://linkedin.com"
+};
