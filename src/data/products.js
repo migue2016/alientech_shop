@@ -94,6 +94,14 @@
     price: 60000,
     images: ["/images/raton-1.png", "/images/raton-2.png"],
     available: true
+  },
+  {
+    id: 13,
+    name: "Hub USB 5 Puertos",
+    description: "Hub USB de 5 puertos multipuerto",
+    price: 90000,
+    images: ["/images/hub5-2.png", "/images/hub5-1.png"],
+    available: true
   }
 ];
 
