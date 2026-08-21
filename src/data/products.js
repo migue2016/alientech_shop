@@ -52,7 +52,7 @@
     name: "Hub USB 7 Puertos",
     description: "Hub USB 3.0 con alimentación externa",
     price: 120000,
-    image: "/images/placeholder-7.svg",
+    image: "/images/hub-7-puertos.png",
     available: true
   },
   {
