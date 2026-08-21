@@ -36,7 +36,7 @@
     name: "Teclado Mecánico RGB",
     description: "Teclado mecánico inalámbrico RGB",
     price: 180000,
-    image: "/images/placeholder-5.svg",
+    image: "/images/teclado-1.png",
     available: true
   },
   {
