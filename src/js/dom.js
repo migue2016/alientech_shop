@@ -46,12 +46,12 @@ function productMedia(product) {
   const images = Array.isArray(product.images) && product.images.length ? product.images : [product.image];
   if (images.length === 1) {
     return `
-      <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-        <img src="${assetUrl(images[0])}" alt="${product.name}" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+      <div class="relative aspect-[4/3] overflow-hidden bg-slate-100 p-2">
+        <img src="${assetUrl(images[0])}" alt="${product.name}" loading="lazy" class="h-full w-full rounded-lg bg-white object-contain transition-transform duration-500 group-hover:scale-105">
       </div>`;
   }
   const slides = images
-    .map((src, i) => `<img src="${assetUrl(src)}" alt="${product.name} — foto ${i + 1}" ${i ? 'loading="lazy"' : ''} draggable="false" class="h-full w-full shrink-0 object-cover">`)
+    .map((src, i) => `<img src="${assetUrl(src)}" alt="${product.name} — foto ${i + 1}" ${i ? 'loading="lazy"' : ''} draggable="false" class="h-full w-full shrink-0 bg-white object-contain">`)
     .join('');
   const dots = images
     .map((_, i) => `<button type="button" data-goto="${i}" aria-label="Ir a la foto ${i + 1}" class="h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'w-4 bg-white' : 'w-1.5 bg-white/50'}"></button>`)
