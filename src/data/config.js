@@ -5,7 +5,7 @@ export const CONTACT_INFO = {
   whatsapp: WHATSAPP_NUMBER,
   email: "miguel.angel.pro87@gmail.com",
   phone: "+57 314 810 6763",
-  city: "Armenia, Quind??o",
+  city: "Armenia, Quindío",
   address: "Calle Principal, Armenia",
   businessHours: {
     weekday: "8:00 AM - 6:00 PM",
@@ -15,9 +15,9 @@ export const CONTACT_INFO = {
 };
 
 export const COMPANY = {
-  name: "Alientech",
-  tagline: "Soluciones tecnol??gicas para tu d??a a d??a",
-  description: "Productos tecnol??gicos y servicios profesionales.",
+  name: "Alientech_shop",
+  tagline: "Soluciones tecnológicas para tu día a día",
+  description: "Productos tecnológicos y servicios profesionales.",
   year: new Date().getFullYear()
 };
 

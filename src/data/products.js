@@ -17,8 +17,8 @@
   },
   {
     id: 3,
-    name: "BaterÃ­a Externa 20000mAh",
-    description: "Powerbank USB-C carga rÃ¡pida",
+    name: "Batería Externa 20000mAh",
+    description: "Powerbank USB-C carga rápida",
     price: 85000,
     image: "/images/placeholder-3.svg",
     available: true
@@ -33,8 +33,8 @@
   },
   {
     id: 5,
-    name: "Teclado MecÃ¡nico RGB",
-    description: "Teclado mecÃ¡nico inalÃ¡mbrico RGB",
+    name: "Teclado Mecánico RGB",
+    description: "Teclado mecánico inalámbrico RGB",
     price: 180000,
     image: "/images/placeholder-5.svg",
     available: true
@@ -42,7 +42,7 @@
   {
     id: 6,
     name: "Mouse Gaming 7200 DPI",
-    description: "Mouse Ã³ptico ergonÃ³mico 6 botones",
+    description: "Mouse óptico ergonómico 6 botones",
     price: 95000,
     image: "/images/placeholder-6.svg",
     available: true
@@ -50,7 +50,7 @@
   {
     id: 7,
     name: "Hub USB 7 Puertos",
-    description: "Hub USB 3.0 con alimentaciÃ³n externa",
+    description: "Hub USB 3.0 con alimentación externa",
     price: 120000,
     image: "/images/placeholder-7.svg",
     available: true
@@ -58,7 +58,7 @@
   {
     id: 8,
     name: "Webcam Full HD",
-    description: "CÃ¡mara 1080p 30fps con micrÃ³fono",
+    description: "Cámara 1080p 30fps con micrófono",
     price: 145000,
     image: "/images/placeholder-8.svg",
     available: false
