@@ -4,7 +4,7 @@
     name: "Adaptador USB-C a Ethernet Gigabit",
     description: "Adaptador de red USB-C a RJ45 Gigabit",
     price: 45000,
-    image: "/images/placeholder-1.svg",
+    image: "/images/adaptador-rj45.png",
     available: true
   },
   {
