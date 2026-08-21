@@ -13,10 +13,11 @@ function statusPill(available) {
 export function createProductCard(product) {
   const link = generateProductWhatsAppLink(product);
   const label = product.available ? 'Comprar por WhatsApp' : 'Consultar disponibilidad';
+  const image = assetUrl(product.image);
   return `
     <article class="card group reveal">
       <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-        <img src="${product.image}" alt="${product.name}" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+        <img src="${image}" alt="${product.name}" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
       </div>
       <div class="flex flex-1 flex-col p-5">
         <div class="flex items-start justify-between gap-3">
@@ -76,6 +77,11 @@ function setText(id, value) {
 function setHref(id, value) {
   const el = document.getElementById(id);
   if (el) el.href = value;
+}
+
+export function assetUrl(path) {
+  const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
+  return `${base}/${path.replace(/^\//, '')}`;
 }
 
 export function setupMobileMenu() {
