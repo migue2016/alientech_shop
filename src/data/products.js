@@ -140,7 +140,7 @@
     name: "Memoria RAM",
     description: "Memoria RAM para computador de mesa",
     price: 80000,
-    images: ["/images/memoria-ram-1.png", "/images/memoria-ram-2.jpg"],
+    images: ["/images/memoria-ram-1.png", "/images/memoria-ram-2.jpg", "/images/memoria-ram-3.png"],
     available: true
   },
   {
