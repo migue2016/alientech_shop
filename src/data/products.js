@@ -134,6 +134,14 @@
     price: 35000,
     images: ["/images/usb-1.png", "/images/usb-2.png", "/images/usb-3.png", "/images/usb-4.png", "/images/usb-5.png"],
     available: true
+  },
+  {
+    id: 18,
+    name: "Memoria RAM",
+    description: "Memoria RAM para computador de mesa",
+    price: 80000,
+    image: "/images/memoria-ram-1.png",
+    available: true
   }
 ];
 
