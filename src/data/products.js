@@ -150,6 +150,14 @@
     price: 1500000,
     images: ["/images/lenovo-i3-1.png", "/images/lenovo-i3-2.png"],
     available: true
+  },
+  {
+    id: 20,
+    name: "Portátil ASUS Pentium Gold",
+    description: "Portátil ASUS con procesador Intel Pentium Gold",
+    price: 1400000,
+    images: ["/images/asus-pentium-gold-1.png", "/images/asus-pentium-gold-2.png", "/images/asus-pentium-gold-3.png"],
+    available: true
   }
 ];
 
