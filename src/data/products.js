@@ -102,6 +102,14 @@
     price: 90000,
     images: ["/images/hub5-2.png", "/images/hub5-1.png"],
     available: true
+  },
+  {
+    id: 14,
+    name: "iPhone",
+    description: "Teléfono inteligente Apple iPhone",
+    price: 1500000,
+    image: "/images/iphone.png",
+    available: true
   }
 ];
 
