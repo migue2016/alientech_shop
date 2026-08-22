@@ -144,6 +144,14 @@
     available: true
   },
   {
+    id: 23,
+    name: "Producto U1",
+    description: "Consulta disponibilidad por WhatsApp",
+    price: 50000,
+    image: "/images/u1.png",
+    available: true
+  },
+  {
     id: 19,
     name: "Portátil Lenovo i3",
     description: "Portátil Lenovo con procesador Intel Core i3",
