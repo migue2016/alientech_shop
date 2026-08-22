@@ -166,6 +166,14 @@
     price: 1800000,
     images: ["/images/torre-amd-1.jpg", "/images/torre-amd-2.jpg"],
     available: true
+  },
+  {
+    id: 22,
+    name: "Impresora POS",
+    description: "Impresora térmica para punto de venta",
+    price: 450000,
+    images: ["/images/impresora-pos-1.jpg", "/images/impresora-pos-2.jpg"],
+    available: true
   }
 ];
 
