@@ -158,6 +158,14 @@
     price: 1400000,
     images: ["/images/asus-pentium-gold-1.png", "/images/asus-pentium-gold-2.png", "/images/asus-pentium-gold-3.png"],
     available: true
+  },
+  {
+    id: 21,
+    name: "Torre AMD",
+    description: "Computador de mesa con procesador AMD",
+    price: 1800000,
+    images: ["/images/torre-amd-1.jpg", "/images/torre-amd-2.jpg"],
+    available: true
   }
 ];
 
