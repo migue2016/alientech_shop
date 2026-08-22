@@ -1,4 +1,26 @@
-﻿export const products = [
+﻿// ============================================================
+//  ALIENTECH_SHOP — LISTA DE PRODUCTOS
+// ============================================================
+//
+//  COMO CAMBIAR UNA FOTO SIN TOCAR CODIGO:
+//    Guarda la imagen nueva en  public/images/  con el MISMO
+//    nombre que ya usa el producto. Listo, nada mas.
+//
+//  COMO AGREGAR MAS FOTOS A UN PRODUCTO (carrusel):
+//    Usa  images: [ ... ]  con varias rutas separadas por coma.
+//    La PRIMERA es la que se muestra de primera.
+//    Ejemplo: images: ["/images/mi-foto-1.png", "/images/mi-foto-2.png"]
+//
+//  ORDEN DE LOS DATOS:
+//    name        = nombre visible en la tarjeta
+//    description = texto corto bajo el nombre
+//    price       = precio en pesos colombianos (solo numeros)
+//    available   = true (Disponible) / false (Agotado)
+//
+// ============================================================
+
+export const products = [
+  // ---------- ADAPTADOR USB-C ----------
   {
     id: 1,
     name: "Adaptador USB-C a Ethernet Gigabit",
@@ -7,6 +29,8 @@
     image: "/images/adaptador-rj45.png",
     available: true
   },
+
+  // ---------- CABLE HDMI ----------
   {
     id: 2,
     name: "Cable HDMI 2.1 Premium 3M",
@@ -15,6 +39,8 @@
     image: "/images/cable_hdmi.png",
     available: true
   },
+
+  // ---------- BATERIA EXTERNA ----------
   {
     id: 3,
     name: "Batería Externa 20000mAh",
@@ -23,6 +49,8 @@
     image: "/images/placeholder-3.svg",
     available: true
   },
+
+  // ---------- MONITOR ACER (carrusel de 2 fotos) ----------
   {
     id: 4,
     name: "Monitor HDMI 24 pulgadas",
@@ -31,6 +59,8 @@
     images: ["/images/monitor-1.png", "/images/monitor-2.png"],
     available: false
   },
+
+  // ---------- TECLADO MECANICO ----------
   {
     id: 5,
     name: "Teclado Mecánico RGB",
@@ -39,6 +69,8 @@
     image: "/images/teclado-1.png",
     available: true
   },
+
+  // ---------- MOUSE GAMING ----------
   {
     id: 6,
     name: "Mouse Gaming 7200 DPI",
@@ -47,6 +79,8 @@
     image: "/images/placeholder-6.svg",
     available: true
   },
+
+  // ---------- HUB 7 PUERTOS ----------
   {
     id: 7,
     name: "Hub USB 7 Puertos",
@@ -55,6 +89,8 @@
     image: "/images/hub-7-puertos.png",
     available: true
   },
+
+  // ---------- WEBCAM ----------
   {
     id: 8,
     name: "Webcam Full HD",
@@ -63,6 +99,8 @@
     image: "/images/placeholder-8.svg",
     available: false
   },
+
+  // ---------- AUDIFONOS XIAOMI ----------
   {
     id: 9,
     name: "Audífonos Xiaomi",
@@ -71,6 +109,8 @@
     image: "/images/audifonos-xiaomi.png",
     available: true
   },
+
+  // ---------- MONITOR GENERICO 22 ----------
   {
     id: 10,
     name: "Monitor 22 pulgadas",
@@ -79,6 +119,8 @@
     image: "/images/monitor2-1.png",
     available: true
   },
+
+  // ---------- MOUSE G1 (carrusel de 3 fotos) ----------
   {
     id: 11,
     name: "Mouse G1",
@@ -87,6 +129,8 @@
     images: ["/images/mouse-g1-3.png", "/images/mouse-g1-1.png", "/images/mouse-g1-2.png"],
     available: true
   },
+
+  // ---------- RATON INALAMBRICO (carrusel de 2 fotos) ----------
   {
     id: 12,
     name: "Ratón Inalámbrico",
@@ -95,6 +139,8 @@
     images: ["/images/raton-1.png", "/images/raton-2.png"],
     available: true
   },
+
+  // ---------- HUB 5 PUERTOS (carrusel de 2 fotos) ----------
   {
     id: 13,
     name: "Hub USB 5 Puertos",
@@ -103,6 +149,8 @@
     images: ["/images/hub5-2.png", "/images/hub5-1.png"],
     available: true
   },
+
+  // ---------- IPHONE ----------
   {
     id: 14,
     name: "iPhone",
@@ -111,6 +159,8 @@
     image: "/images/iphone.png",
     available: true
   },
+
+  // ---------- KIT GAMER (carrusel de 4 fotos) ----------
   {
     id: 15,
     name: "Kit Gamer",
@@ -119,6 +169,8 @@
     images: ["/images/gamer-1.png", "/images/gamer-2.png", "/images/gamer-3.png", "/images/gamer-4.png"],
     available: true
   },
+
+  // ---------- PASTA TERMICA (carrusel de 2 fotos) ----------
   {
     id: 16,
     name: "Pasta Térmica",
@@ -127,14 +179,24 @@
     images: ["/images/pasta-termica-1.png", "/images/pasta-termica-2.png"],
     available: true
   },
+
+  // ---------- MEMORIA USB (carrusel de 5 fotos) ----------
   {
     id: 17,
     name: "Memoria USB",
     description: "Memoria USB de alta velocidad",
     price: 35000,
-    images: ["/images/usb-1.png", "/images/usb-2.png", "/images/usb-3.png", "/images/usb-4.png", "/images/usb-5.png"],
+    images: [
+      "/images/usb-1.png",
+      "/images/usb-2.png",
+      "/images/usb-3.png",
+      "/images/usb-4.png",
+      "/images/usb-5.png"
+    ],
     available: true
   },
+
+  // ---------- MEMORIA RAM ----------
   {
     id: 18,
     name: "Memoria RAM",
@@ -143,22 +205,8 @@
     image: "/images/ram-1.jpg",
     available: true
   },
-  {
-    id: 23,
-    name: "Producto U1",
-    description: "Consulta disponibilidad por WhatsApp",
-    price: 50000,
-    image: "/images/u1.png",
-    available: true
-  },
-  {
-    id: 24,
-    name: "Monitor Samsung 22 Pulgadas",
-    description: "Monitor Samsung 22 pulgadas Full HD",
-    price: 350000,
-    image: "/images/monitor-samsung-22.png",
-    available: true
-  },
+
+  // ---------- PORTATIL LENOVO I3 (carrusel de 2 fotos) ----------
   {
     id: 19,
     name: "Portátil Lenovo i3",
@@ -167,6 +215,8 @@
     images: ["/images/lenovo-i3-1.png", "/images/lenovo-i3-2.png"],
     available: true
   },
+
+  // ---------- PORTATIL ASUS PENTIUM GOLD (carrusel de 3 fotos) ----------
   {
     id: 20,
     name: "Portátil ASUS Pentium Gold",
@@ -175,6 +225,8 @@
     images: ["/images/asus-pentium-gold-1.png", "/images/asus-pentium-gold-2.png", "/images/asus-pentium-gold-3.png"],
     available: true
   },
+
+  // ---------- TORRE AMD (carrusel de 2 fotos) ----------
   {
     id: 21,
     name: "Torre AMD",
@@ -183,12 +235,34 @@
     images: ["/images/torre-amd-1.jpg", "/images/torre-amd-2.jpg"],
     available: true
   },
+
+  // ---------- IMPRESORA POS (carrusel de 2 fotos) ----------
   {
     id: 22,
     name: "Impresora POS",
     description: "Impresora térmica para punto de venta",
     price: 450000,
     images: ["/images/impresora-pos-1.jpg", "/images/impresora-pos-2.jpg"],
+    available: true
+  },
+
+  // ---------- PRODUCTO U1 ----------
+  {
+    id: 23,
+    name: "Producto U1",
+    description: "Consulta disponibilidad por WhatsApp",
+    price: 50000,
+    image: "/images/u1.png",
+    available: true
+  },
+
+  // ---------- MONITOR SAMSUNG 22 ----------
+  {
+    id: 24,
+    name: "Monitor Samsung 22 Pulgadas",
+    description: "Monitor Samsung 22 pulgadas Full HD",
+    price: 350000,
+    image: "/images/monitor-samsung-22.png",
     available: true
   }
 ];
