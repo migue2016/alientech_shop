@@ -118,6 +118,14 @@
     price: 250000,
     images: ["/images/gamer-1.png", "/images/gamer-2.png", "/images/gamer-3.png", "/images/gamer-4.png"],
     available: true
+  },
+  {
+    id: 16,
+    name: "Pasta Térmica",
+    description: "Pasta térmica para procesadores",
+    price: 25000,
+    images: ["/images/pasta-termica-1.png", "/images/pasta-termica-2.png"],
+    available: true
   }
 ];
 
