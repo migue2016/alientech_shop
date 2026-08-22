@@ -126,6 +126,14 @@
     price: 25000,
     images: ["/images/pasta-termica-1.png", "/images/pasta-termica-2.png"],
     available: true
+  },
+  {
+    id: 17,
+    name: "Memoria USB",
+    description: "Memoria USB de alta velocidad",
+    price: 35000,
+    images: ["/images/usb-1.png", "/images/usb-2.png", "/images/usb-3.png", "/images/usb-4.png", "/images/usb-5.png"],
+    available: true
   }
 ];
 
