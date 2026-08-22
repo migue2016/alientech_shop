@@ -110,6 +110,14 @@
     price: 1500000,
     image: "/images/iphone.png",
     available: true
+  },
+  {
+    id: 15,
+    name: "Kit Gamer",
+    description: "Combo de accesorios para gamers",
+    price: 250000,
+    images: ["/images/gamer-1.png", "/images/gamer-2.png", "/images/gamer-3.png", "/images/gamer-4.png"],
+    available: true
   }
 ];
 
