@@ -142,6 +142,14 @@
     price: 80000,
     image: "/images/memoria-ram-1.png",
     available: true
+  },
+  {
+    id: 19,
+    name: "Portátil Lenovo i3",
+    description: "Portátil Lenovo con procesador Intel Core i3",
+    price: 1500000,
+    images: ["/images/lenovo-i3-1.png", "/images/lenovo-i3-2.png"],
+    available: true
   }
 ];
 
