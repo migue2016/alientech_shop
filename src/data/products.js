@@ -152,6 +152,14 @@
     available: true
   },
   {
+    id: 24,
+    name: "Monitor Samsung 22 Pulgadas",
+    description: "Monitor Samsung 22 pulgadas Full HD",
+    price: 350000,
+    image: "/images/monitor-samsung-22.png",
+    available: true
+  },
+  {
     id: 19,
     name: "Portátil Lenovo i3",
     description: "Portátil Lenovo con procesador Intel Core i3",
