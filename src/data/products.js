@@ -136,6 +136,14 @@
     available: true
   },
   {
+    id: 18,
+    name: "Memoria RAM",
+    description: "Memoria RAM para computador de mesa",
+    price: 80000,
+    image: "/images/ram-1.jpg",
+    available: true
+  },
+  {
     id: 19,
     name: "Portátil Lenovo i3",
     description: "Portátil Lenovo con procesador Intel Core i3",
