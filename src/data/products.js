@@ -236,7 +236,7 @@ export const products = [
     description: "Portátil ASUS con procesador Intel Pentium Gold",
     price: 1400000,
     condition: "nuevo",
-    images: ["/images/asus-pentium-gold-1.png", "/images/asus-pentium-gold-2.png", "/images/asus-pentium-gold-3.png"],
+    images: ["/images/asus-pentium-gold-1.jpg", "/images/asus-pentium-gold-2.jpg", "/images/asus-pentium-gold-3.jpg"],
     available: true
   },
 
