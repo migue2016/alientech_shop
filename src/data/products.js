@@ -43,17 +43,7 @@ export const products = [
     available: true
   },
 
-  // ---------- BATERIA EXTERNA ----------
-  {
-    id: 3,
-    name: "Batería Externa 20000mAh",
-    description: "Powerbank USB-C carga rápida",
-    price: 85000,
-    condition: "nuevo",
-    image: "/images/placeholder-3.svg",
-    available: true
-  },
-
+ 
   // ---------- MONITOR ACER (carrusel de 2 fotos) ----------
   {
     id: 4,
@@ -98,16 +88,6 @@ export const products = [
     available: true
   },
 
-  // ---------- WEBCAM ----------
-  {
-    id: 8,
-    name: "Webcam Full HD",
-    description: "Cámara 1080p 30fps con micrófono",
-    price: 145000,
-    condition: "nuevo",
-    image: "/images/placeholder-8.svg",
-    available: false
-  },
 
   // ---------- AUDIFONOS XIAOMI ----------
   {
