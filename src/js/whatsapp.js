@@ -17,5 +17,5 @@ export function generateServiceWhatsAppLink(service) {
 }
 
 export function generateGeneralWhatsAppLink() {
-  return buildLink('Hola 👋 Quiero recibir asesoría de Alientech.');
+  return buildLink('Hola 👋 Quiero recibir asesoría de Alientech_shop.');
 }

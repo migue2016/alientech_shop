@@ -4,14 +4,14 @@ export const services = [
     icon: "wrench",
     name: "Mantenimiento de Computadores",
     description: "Limpieza y optimización de equipos",
-    price: "Desde $80.000"
+    price: "Consultar"
   },
   {
     id: 2,
     icon: "disc",
     name: "Instalación de Sistemas",
     description: "Instalación de Windows, Linux o macOS",
-    price: "Desde $60.000"
+    price: "Consultar"
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const services = [
     icon: "shield",
     name: "Soporte Técnico Remoto",
     description: "Asistencia técnica vía remoto",
-    price: "Desde $50.000/hora"
+    price: "Consultar"
   },
   {
     id: 5,

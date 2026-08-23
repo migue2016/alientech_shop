@@ -25,7 +25,7 @@ export const products = [
   {
     id: 1,
     name: "Adaptador USB-C a Ethernet Gigabit",
-    description: "Adaptador de red USB-C a RJ45 Gigabit",
+    description: "Adaptador USB C a Ethernet, USB 3.0 a RJ45 Gigabit LAN 1000 Mbps de red cableada, adaptador USB a Ethernet para portátiles/tableta, compatible con Windows XP, MAC OS, Linux, Vista 7 8 10 11",
     price: 45000,
     condition: "nuevo",
     image: "/images/adaptador-rj45.png",
