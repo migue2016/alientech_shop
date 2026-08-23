@@ -16,6 +16,45 @@ function conditionPill(condition) {
     : '<span class="inline-flex shrink-0 items-center rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700">Nuevo</span>';
 }
 
+function descriptionBlock(text) {
+  const desc = String(text || '');
+  if (desc.length <= 90) {
+    return `<p class="mt-2 text-sm leading-relaxed text-slate-500">${desc}</p>`;
+  }
+  return `
+    <div data-desc-wrap data-expanded="false" class="mt-2">
+      <div class="relative max-h-[4.5rem] overflow-hidden transition-[max-height] duration-300" data-desc-box>
+        <p class="text-sm leading-relaxed text-slate-500">${desc}</p>
+        <div data-desc-fade class="pointer-events-none absolute inset-x-0 bottom-0 h-7 bg-gradient-to-t from-white to-transparent"></div>
+      </div>
+      <button type="button" data-desc-toggle aria-expanded="false" class="mt-1.5 inline-flex items-center gap-1 rounded-md text-xs font-semibold text-blue-600 transition hover:text-blue-800">
+        <span data-desc-label>Ver más</span>
+        <svg data-desc-chevron class="h-3.5 w-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+    </div>`;
+}
+
+export function setupDescriptionToggles(root = document) {
+  root.querySelectorAll('[data-desc-toggle]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const wrap = btn.closest('[data-desc-wrap]');
+      if (!wrap) return;
+      const box = wrap.querySelector('[data-desc-box]');
+      const fade = wrap.querySelector('[data-desc-fade]');
+      const label = btn.querySelector('[data-desc-label]');
+      const chevron = btn.querySelector('[data-desc-chevron]');
+      const expanded = wrap.dataset.expanded === 'true';
+      wrap.dataset.expanded = String(!expanded);
+      box.classList.toggle('max-h-[4.5rem]', expanded);
+      box.classList.toggle('overflow-hidden', expanded);
+      fade?.classList.toggle('hidden', !expanded);
+      label.textContent = expanded ? 'Ver más' : 'Ver menos';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      chevron.classList.toggle('rotate-180', !expanded);
+    });
+  });
+}
+
 export function createProductCard(product) {
   const link = generateProductWhatsAppLink(product);
   const label = product.available ? 'Comprar por WhatsApp' : 'Consultar disponibilidad';
@@ -26,7 +65,7 @@ export function createProductCard(product) {
         <div class="flex items-start justify-between gap-3">
           <h3 class="font-semibold leading-snug text-slate-900">${product.name}</h3>
         </div>
-        <p class="mt-2 line-clamp-2 text-sm leading-relaxed text-slate-500">${product.description}</p>
+        ${descriptionBlock(product.description)}
         <div class="mt-auto pt-4">
           <div class="flex flex-wrap items-center gap-2">
             ${conditionPill(product.condition)}
