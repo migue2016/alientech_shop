@@ -218,14 +218,14 @@ export const products = [
     available: true
   },
 
-  // ---------- PORTATIL LENOVO I3 (carrusel de 2 fotos) ----------
+  // ---------- PORTATIL LENOVO I3 (carrusel de 3 fotos) ----------
   {
     id: 19,
     name: "Portátil Lenovo i3",
     description: "Portátil Lenovo con procesador Intel Core i3",
     price: 1500000,
     condition: "nuevo",
-    images: ["/images/lenovo-i3-1.png", "/images/lenovo-i3-2.png"],
+    images: ["/images/lenovo-i3-1.jpg", "/images/lenovo-i3-2.jpg", "/images/lenovo-i3-3.jpg"],
     available: true
   },
 
