@@ -15,6 +15,7 @@
 //    name        = nombre visible en la tarjeta
 //    description = texto corto bajo el nombre
 //    price       = precio en pesos colombianos (solo numeros)
+//    condition   = "nuevo" o "usado"  (etiqueta de la tarjeta)
 //    available   = true (Disponible) / false (Agotado)
 //
 // ============================================================
@@ -26,6 +27,7 @@ export const products = [
     name: "Adaptador USB-C a Ethernet Gigabit",
     description: "Adaptador de red USB-C a RJ45 Gigabit",
     price: 45000,
+    condition: "nuevo",
     image: "/images/adaptador-rj45.png",
     available: true
   },
@@ -36,6 +38,7 @@ export const products = [
     name: "Cable HDMI 2.1 Premium 3M",
     description: "Cable HDMI 2.1 alta velocidad 4K 120Hz",
     price: 65000,
+    condition: "nuevo",
     image: "/images/cable_hdmi.png",
     available: true
   },
@@ -46,6 +49,7 @@ export const products = [
     name: "Batería Externa 20000mAh",
     description: "Powerbank USB-C carga rápida",
     price: 85000,
+    condition: "nuevo",
     image: "/images/placeholder-3.svg",
     available: true
   },
@@ -56,6 +60,7 @@ export const products = [
     name: "Monitor HDMI 24 pulgadas",
     description: "Monitor Full HD 1920x1080 IPS",
     price: 450000,
+    condition: "nuevo",
     images: ["/images/monitor-1.png", "/images/monitor-2.png"],
     available: false
   },
@@ -66,6 +71,7 @@ export const products = [
     name: "Teclado Mecánico RGB",
     description: "Teclado mecánico inalámbrico RGB",
     price: 180000,
+    condition: "nuevo",
     image: "/images/teclado-1.png",
     available: true
   },
@@ -76,6 +82,7 @@ export const products = [
     name: "Mouse Gaming 7200 DPI",
     description: "Mouse óptico ergonómico 6 botones",
     price: 95000,
+    condition: "nuevo",
     image: "/images/placeholder-6.svg",
     available: true
   },
@@ -86,6 +93,7 @@ export const products = [
     name: "Hub USB 7 Puertos",
     description: "Hub USB 3.0 con alimentación externa",
     price: 120000,
+    condition: "nuevo",
     image: "/images/hub-7-puertos.png",
     available: true
   },
@@ -96,6 +104,7 @@ export const products = [
     name: "Webcam Full HD",
     description: "Cámara 1080p 30fps con micrófono",
     price: 145000,
+    condition: "nuevo",
     image: "/images/placeholder-8.svg",
     available: false
   },
@@ -106,6 +115,7 @@ export const products = [
     name: "Audífonos Xiaomi",
     description: "Audífonos inalámbricos Xiaomi con Bluetooth",
     price: 99000,
+    condition: "nuevo",
     image: "/images/audifonos-xiaomi.png",
     available: true
   },
@@ -116,6 +126,7 @@ export const products = [
     name: "Monitor 22 pulgadas",
     description: "Monitor HD ideal para oficina y hogar",
     price: 320000,
+    condition: "nuevo",
     image: "/images/monitor2-1.png",
     available: true
   },
@@ -126,6 +137,7 @@ export const products = [
     name: "Mouse G1",
     description: "Mouse gaming G1 con luces RGB",
     price: 85000,
+    condition: "nuevo",
     images: ["/images/mouse-g1-3.png", "/images/mouse-g1-1.png", "/images/mouse-g1-2.png"],
     available: true
   },
@@ -136,6 +148,7 @@ export const products = [
     name: "Ratón Inalámbrico",
     description: "Ratón inalámbrico silencioso plug and play",
     price: 60000,
+    condition: "nuevo",
     images: ["/images/raton-1.png", "/images/raton-2.png"],
     available: true
   },
@@ -146,6 +159,7 @@ export const products = [
     name: "Hub USB 5 Puertos",
     description: "Hub USB de 5 puertos multipuerto",
     price: 90000,
+    condition: "nuevo",
     images: ["/images/hub5-2.png", "/images/hub5-1.png"],
     available: true
   },
@@ -156,6 +170,7 @@ export const products = [
     name: "iPhone",
     description: "Teléfono inteligente Apple iPhone",
     price: 1500000,
+    condition: "nuevo",
     image: "/images/iphone.png",
     available: true
   },
@@ -166,6 +181,7 @@ export const products = [
     name: "Kit Gamer",
     description: "Combo de accesorios para gamers",
     price: 250000,
+    condition: "nuevo",
     images: ["/images/gamer-1.png", "/images/gamer-2.png", "/images/gamer-3.png", "/images/gamer-4.png"],
     available: true
   },
@@ -176,6 +192,7 @@ export const products = [
     name: "Pasta Térmica",
     description: "Pasta térmica para procesadores",
     price: 25000,
+    condition: "nuevo",
     images: ["/images/pasta-termica-1.png", "/images/pasta-termica-2.png"],
     available: true
   },
@@ -186,6 +203,7 @@ export const products = [
     name: "Memoria USB",
     description: "Memoria USB de alta velocidad",
     price: 35000,
+    condition: "nuevo",
     images: [
       "/images/usb-1.png",
       "/images/usb-2.png",
@@ -202,47 +220,8 @@ export const products = [
     name: "Memoria RAM",
     description: "Memoria RAM para computador de mesa",
     price: 80000,
+    condition: "nuevo",
     image: "/images/ram-1.jpg",
-    available: true
-  },
-
-  // ---------- PORTATIL LENOVO I3 (carrusel de 2 fotos) ----------
-  {
-    id: 19,
-    name: "Portátil Lenovo i3",
-    description: "Portátil Lenovo con procesador Intel Core i3",
-    price: 1500000,
-    images: ["/images/lenovo-i3-1.png", "/images/lenovo-i3-2.png"],
-    available: true
-  },
-
-  // ---------- PORTATIL ASUS PENTIUM GOLD (carrusel de 3 fotos) ----------
-  {
-    id: 20,
-    name: "Portátil ASUS Pentium Gold",
-    description: "Portátil ASUS con procesador Intel Pentium Gold",
-    price: 1400000,
-    images: ["/images/asus-pentium-gold-1.png", "/images/asus-pentium-gold-2.png", "/images/asus-pentium-gold-3.png"],
-    available: true
-  },
-
-  // ---------- TORRE AMD (carrusel de 2 fotos) ----------
-  {
-    id: 21,
-    name: "Torre AMD",
-    description: "Computador de mesa con procesador AMD",
-    price: 1800000,
-    images: ["/images/torre-amd-1.jpg", "/images/torre-amd-2.jpg"],
-    available: true
-  },
-
-  // ---------- IMPRESORA POS (carrusel de 2 fotos) ----------
-  {
-    id: 22,
-    name: "Impresora POS",
-    description: "Impresora térmica para punto de venta",
-    price: 450000,
-    images: ["/images/impresora-pos-1.jpg", "/images/impresora-pos-2.jpg"],
     available: true
   },
 
@@ -252,6 +231,7 @@ export const products = [
     name: "Producto U1",
     description: "Consulta disponibilidad por WhatsApp",
     price: 50000,
+    condition: "nuevo",
     image: "/images/u1.png",
     available: true
   },
@@ -262,7 +242,52 @@ export const products = [
     name: "Monitor Samsung 22 Pulgadas",
     description: "Monitor Samsung 22 pulgadas Full HD",
     price: 350000,
+    condition: "nuevo",
     image: "/images/monitor-samsung-22.png",
+    available: true
+  },
+
+  // ---------- PORTATIL LENOVO I3 (carrusel de 2 fotos) ----------
+  {
+    id: 19,
+    name: "Portátil Lenovo i3",
+    description: "Portátil Lenovo con procesador Intel Core i3",
+    price: 1500000,
+    condition: "nuevo",
+    images: ["/images/lenovo-i3-1.png", "/images/lenovo-i3-2.png"],
+    available: true
+  },
+
+  // ---------- PORTATIL ASUS PENTIUM GOLD (carrusel de 3 fotos) ----------
+  {
+    id: 20,
+    name: "Portátil ASUS Pentium Gold",
+    description: "Portátil ASUS con procesador Intel Pentium Gold",
+    price: 1400000,
+    condition: "nuevo",
+    images: ["/images/asus-pentium-gold-1.png", "/images/asus-pentium-gold-2.png", "/images/asus-pentium-gold-3.png"],
+    available: true
+  },
+
+  // ---------- TORRE AMD (carrusel de 2 fotos) ----------
+  {
+    id: 21,
+    name: "Torre AMD",
+    description: "Computador de mesa con procesador AMD",
+    price: 1800000,
+    condition: "nuevo",
+    images: ["/images/torre-amd-1.jpg", "/images/torre-amd-2.jpg"],
+    available: true
+  },
+
+  // ---------- IMPRESORA POS (carrusel de 2 fotos) ----------
+  {
+    id: 22,
+    name: "Impresora POS",
+    description: "Impresora térmica para punto de venta",
+    price: 450000,
+    condition: "nuevo",
+    images: ["/images/impresora-pos-1.jpg", "/images/impresora-pos-2.jpg"],
     available: true
   }
 ];
