@@ -50,7 +50,7 @@ export const products = [
     name: "Monitor HDMI 24 pulgadas",
     description: "Monitor Full HD 1920x1080 IPS",
     price: 450000,
-    condition: "nuevo",
+    condition: "usado",
     images: ["/images/monitor-1.png", "/images/monitor-2.png"],
     available: false
   },
@@ -84,7 +84,7 @@ export const products = [
   {
     id: 9,
     name: "Audífonos Xiaomi",
-    description: "Audífonos inalámbricos Xiaomi con Bluetooth",
+    description: "Audífonos inalámbricos Xiaomi con Bluetooth color negros",
     price: 99000,
     condition: "nuevo",
     image: "/images/audifonos-xiaomi.png",
@@ -97,7 +97,7 @@ export const products = [
     name: "Monitor 22 pulgadas",
     description: "Monitor HD ideal para oficina y hogar",
     price: 320000,
-    condition: "nuevo",
+    condition: "usado",
     image: "/images/monitor2-1.png",
     available: true
   },
@@ -191,7 +191,7 @@ export const products = [
     name: "Memoria RAM",
     description: "Memoria RAM para computador de mesa",
     price: 80000,
-    condition: "nuevo",
+    condition: "open box",
     image: "/images/ram-1.jpg",
     available: true
   },
@@ -213,7 +213,7 @@ export const products = [
     name: "Monitor Samsung 22 Pulgadas",
     description: "Monitor Samsung 22 pulgadas Full HD",
     price: 350000,
-    condition: "nuevo",
+    condition: "usado",
     image: "/images/monitor-samsung-22.png",
     available: true
   },
@@ -224,7 +224,7 @@ export const products = [
     name: "Portátil Lenovo i3",
     description: "Portátil Lenovo con procesador Intel Core i3",
     price: 1500000,
-    condition: "nuevo",
+    condition: "usado",
     images: ["/images/lenovo-i3-1.jpg", "/images/lenovo-i3-2.jpg", "/images/lenovo-i3-3.jpg"],
     available: true
   },
@@ -235,7 +235,7 @@ export const products = [
     name: "Portátil ASUS Pentium Gold",
     description: "Portátil ASUS con procesador Intel Pentium Gold",
     price: 1400000,
-    condition: "nuevo",
+    condition: "usado",
     images: ["/images/asus-pentium-gold-1.jpg", "/images/asus-pentium-gold-2.jpg", "/images/asus-pentium-gold-3.jpg"],
     available: true
   },
@@ -246,7 +246,7 @@ export const products = [
     name: "Torre AMD",
     description: "Computador de mesa con procesador AMD",
     price: 1800000,
-    condition: "nuevo",
+    condition: "usado",
     images: ["/images/torre-amd-1.jpg", "/images/torre-amd-2.jpg"],
     available: true
   },
@@ -257,7 +257,7 @@ export const products = [
     name: "Impresora POS",
     description: "Impresora térmica para punto de venta",
     price: 450000,
-    condition: "nuevo",
+    condition: "usado",
     images: ["/images/impresora-pos-1.jpg", "/images/impresora-pos-2.jpg"],
     available: true
   }
