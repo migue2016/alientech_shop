@@ -73,7 +73,7 @@ export const products = [
     id: 7,
     name: "Hub USB 7 Puertos",
     description: "Aluminio 7 en 1 USB C y USB Hub con USB 3.0, puertos USB 2.0 para PC/portátiles/MacBook Pro/Air/iMac/iPad y más dispositivos",
-    price: 120000,
+    price: 35000,
     condition: "nuevo",
     image: "/images/hub-7-puertos.png",
     available: true
@@ -85,7 +85,7 @@ export const products = [
     id: 9,
     name: "Audífonos Xiaomi",
     description: "Audífonos inalámbricos Xiaomi con Bluetooth color negros,5 modos de ecualización,Batería de duración ultralarga de 36 horas,Reducción de ruido por IA para llamadas",
-    price: 99000,
+    price: 75000,
     condition: "nuevo",
     image: "/images/audifonos-xiaomi.png",
     available: true
@@ -151,7 +151,7 @@ export const products = [
     id: 15,
     name: "Mouse Gamer Havit MS954 RGB Negro",
     description: "Mouse Gamer RGB – Precisión y Estilo para Ganar Cada Partida Domina tus juegos con este mouse gamer diseñado para ofrecer precisión extrema, durabilidad y un diseño que complementa cualquier setup. Con una iluminación LED RGB personalizable, este mouse no solo destaca por su rendimiento, sino también por su estilo único. Características principales -Resolución ajustable: Configura entre 800, 1600, 2400, 3200, 6400 y hasta 12000 DPI para adaptarte a cualquier estilo de juego, desde precisión milimétrica hasta movimientos rápidos. -7 teclas programables: Mayor control y personalización para tus estrategias.",
-    price: 250000,
+    price: 90000,
     condition: "nuevo",
     images: ["/images/gamer-1.png", "/images/gamer-2.png", "/images/gamer-3.png", "/images/gamer-4.png"],
     available: true
@@ -160,9 +160,9 @@ export const products = [
   // ---------- PASTA TERMICA (carrusel de 2 fotos) ----------
   {
     id: 16,
-    name: "Pasta Térmica",
-    description: "Pasta térmica para procesadores",
-    price: 25000,
+    name: "ARCTIC MX-6 (8 g) - Pasta Térmica",
+    description: "CALIDAD COMPROBADA: Con más de 20 años de experiencia en el mercado de enfriamiento de PC, nuestro enfoque ha sido en el rendimiento mejorado, posibilidades de aplicación versátiles y una consistencia fácil de usar",
+    price: 60000,
     condition: "nuevo",
     images: ["/images/pasta-termica-1.png", "/images/pasta-termica-2.png"],
     available: true
@@ -171,9 +171,9 @@ export const products = [
   // ---------- MEMORIA USB (carrusel de 5 fotos) ----------
   {
     id: 17,
-    name: "Memoria USB",
-    description: "Memoria USB de alta velocidad",
-    price: 35000,
+    name: "adaptadores USB C a USB3.1 de 10 Gbps/120 W",
+    description: "Compatibilidad: el adaptador USB C a USB 3.0 es compatible con iPhone 15/16/17, Plus Pro, Pro Max, Samsung Galaxy, Google, MacBook Pro después de 2016, MacBook Air después de 2018, IMac, Dell XPS y la mayoría de las laptops, tabletas y teléfonos inteligentes con un puerto USB tipo C.",
+    price: 10000,
     condition: "nuevo",
     images: [
       "/images/usb-1.png",
@@ -188,9 +188,9 @@ export const products = [
   // ---------- MEMORIA RAM ----------
   {
     id: 18,
-    name: "Memoria RAM",
-    description: "Memoria RAM para computador de mesa",
-    price: 80000,
+    name: "Memoria Ram XPG DDR4 8GB 3200MHz",
+    description: "La XPG Spectrix D35G es la memoria RAM que tu sistema necesita para alcanzar un nuevo nivel de velocidad y eficiencia. Con 8GB de capacidad y una frecuencia de 3200 MHz, esta memoria ofrece una respuesta rápida y un ancho de banda superior NOTA IMPORTANTE: Antes de comprar, verifica la compatibilidad con tu placa base y procesador. La memoria RAM debe ser compatible con la arquitectura de tu sistema para garantizar un rendimiento óptimo. NOTA: dispositivo abierto para pruebas",
+    price: 280000,
     condition: "open box",
     image: "/images/ram-1.jpg",
     available: true
@@ -199,9 +199,9 @@ export const products = [
   // ---------- PRODUCTO U1 ----------
   {
     id: 23,
-    name: "Producto U1",
-    description: "Consulta disponibilidad por WhatsApp",
-    price: 50000,
+    name: "Memoria usb 32gb",
+    description: "Almacenamiento de datos duradero;",
+    price: 30000,
     condition: "nuevo",
     image: "/images/u1.png",
     available: true
@@ -211,8 +211,8 @@ export const products = [
   {
     id: 24,
     name: "Monitor Samsung 22 Pulgadas",
-    description: "Monitor Samsung 22 pulgadas Full HD",
-    price: 350000,
+    description: "Monitor Samsung 22 pulgadas Full HD con entrada HDMI y VGA, ideal para oficina y hogar",
+    price: 240000,
     condition: "usado",
     image: "/images/monitor-samsung-22.png",
     available: true
@@ -222,8 +222,8 @@ export const products = [
   {
     id: 19,
     name: "Portátil Lenovo i3",
-    description: "Portátil Lenovo con procesador Intel Core i3",
-    price: 1500000,
+    description: "Portátil Lenovo con procesador Intel Core i3 10 generacion ssd 256gb ram 12gb pantalla 15.6 pulgadas, bateria al 100% y se entrega con cargador original",
+    price: 750000,
     condition: "usado",
     images: ["/images/lenovo-i3-1.jpg", "/images/lenovo-i3-2.jpg", "/images/lenovo-i3-3.jpg"],
     available: true
@@ -232,9 +232,9 @@ export const products = [
   // ---------- PORTATIL ASUS PENTIUM GOLD (carrusel de 3 fotos) ----------
   {
     id: 20,
-    name: "Portátil ASUS Pentium Gold",
-    description: "Portátil ASUS con procesador Intel Pentium Gold",
-    price: 1400000,
+    name: "Portátil ASUS ",
+    description: "Portátil ASUS con procesador Intel Pentium Gold bateria al 100% ssd 256gb ram de 12gb se entrega con cargador original, pantalla de 15.6 pulgadas",
+    price: 830000,
     condition: "usado",
     images: ["/images/asus-pentium-gold-1.jpg", "/images/asus-pentium-gold-2.jpg", "/images/asus-pentium-gold-3.jpg"],
     available: true
@@ -243,9 +243,9 @@ export const products = [
   // ---------- TORRE AMD (carrusel de 2 fotos) ----------
   {
     id: 21,
-    name: "Torre AMD",
-    description: "Computador de mesa con procesador AMD",
-    price: 1800000,
+    name: "Torre AMD ryzen 5 ",
+    description: "torre gamer con procesador amd ryzen 5 5500 grafica dedicada de 3gb ram de 16gb ssd 256gb fuente de poder certificada 500w chasis gamer con ventiladores rgb",
+    price: 1980000,
     condition: "usado",
     images: ["/images/torre-amd-1.jpg", "/images/torre-amd-2.jpg"],
     available: true
@@ -256,7 +256,7 @@ export const products = [
     id: 22,
     name: "Impresora POS",
     description: "Impresora térmica para punto de venta",
-    price: 450000,
+    price: 250000,
     condition: "usado",
     images: ["/images/impresora-pos-1.jpg", "/images/impresora-pos-2.jpg"],
     available: true

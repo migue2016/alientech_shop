@@ -39,20 +39,27 @@ export const services = [
     icon: "zap",
     name: "Optimización de Computadores",
     description: "Mejora del rendimiento y velocidad",
-    price: "Desde $100.000"
+    price: "Consultar"
   },
   {
     id: 7,
     icon: "printer",
     name: "Configuración de Impresoras",
     description: "Instalación e integración en red",
-    price: "Desde $40.000"
+    price: "Consultar"
   },
   {
     id: 8,
     icon: "database",
     name: "Recuperación de Datos",
     description: "Recuperación de discos y USB",
+    price: "Consultar"
+  },
+  {
+    id: 9,
+    icon: "key",
+    name: "Venta de Licencias",
+    description: "Licencias originales de Windows, Office y antivirus",
     price: "Consultar"
   }
 ];
