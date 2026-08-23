@@ -66,16 +66,7 @@ export const products = [
     available: true
   },
 
-  // ---------- MOUSE GAMING ----------
-  {
-    id: 6,
-    name: "Mouse Gaming 7200 DPI",
-    description: "Mouse óptico ergonómico 6 botones",
-    price: 95000,
-    condition: "nuevo",
-    image: "/images/placeholder-6.svg",
-    available: true
-  },
+  
 
   // ---------- HUB 7 PUERTOS ----------
   {
