@@ -107,16 +107,23 @@ export function createServiceCard(service) {
     </article>`;
 }
 
+function soldOutBadge() {
+  return `<div class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 -rotate-12 select-none rounded-md bg-red-600 px-4 py-1.5 text-sm font-bold uppercase tracking-widest text-white shadow-lg ring-1 ring-white/25">Agotado</div>`;
+}
+
 function productMedia(product) {
   const images = Array.isArray(product.images) && product.images.length ? product.images : [product.image];
+  const soldOut = product.available === false;
+  const imgState = soldOut ? 'grayscale opacity-75' : '';
   if (images.length === 1) {
     return `
       <div class="relative aspect-[4/3] overflow-hidden bg-slate-100 p-2">
-        <img src="${assetUrl(images[0])}" alt="${product.name}" loading="lazy" class="h-full w-full rounded-lg bg-white object-contain transition-transform duration-500 group-hover:scale-105">
+        <img src="${assetUrl(images[0])}" alt="${product.name}" loading="lazy" class="h-full w-full rounded-lg bg-white object-contain transition-transform duration-500 group-hover:scale-105 ${imgState}">
+        ${soldOut ? soldOutBadge() : ''}
       </div>`;
   }
   const slides = images
-    .map((src, i) => `<img src="${assetUrl(src)}" alt="${product.name} — foto ${i + 1}" ${i ? 'loading="lazy"' : ''} draggable="false" class="h-full w-full shrink-0 bg-white object-contain">`)
+    .map((src, i) => `<img src="${assetUrl(src)}" alt="${product.name} — foto ${i + 1}" ${i ? 'loading="lazy"' : ''} draggable="false" class="h-full w-full shrink-0 bg-white object-contain ${imgState}">`)
     .join('');
   const dots = images
     .map((_, i) => `<button type="button" data-goto="${i}" aria-label="Ir a la foto ${i + 1}" class="h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'w-4 bg-white' : 'w-1.5 bg-white/50'}"></button>`)
@@ -131,6 +138,7 @@ function productMedia(product) {
         <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
       </button>
       <div class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5">${dots}</div>
+      ${soldOut ? soldOutBadge() : ''}
     </div>`;
 }
 

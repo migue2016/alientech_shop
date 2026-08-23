@@ -35,9 +35,9 @@ export const products = [
   // ---------- CABLE HDMI ----------
   {
     id: 2,
-    name: "Cable HDMI 2.1 Premium 3M",
+    name: "Cable HDMI ",
     description: "Cable HDMI 2.1 alta velocidad 4K 120Hz",
-    price: 65000,
+    price: 10000,
     condition: "nuevo",
     image: "/images/cable_hdmi.png",
     available: true
@@ -48,19 +48,19 @@ export const products = [
   {
     id: 4,
     name: "Monitor HDMI 24 pulgadas",
-    description: "Monitor Full HD 1920x1080 IPS",
-    price: 450000,
+    description: "Monitor Full HD 1920x1080 IPS con AMD Freesynccon taza de refresco de 165 hz el monitor es de 24 pulgadas pantalla curva",
+    price: 620000,
     condition: "usado",
     images: ["/images/monitor-1.png", "/images/monitor-2.png"],
-    available: false
+    available: true
   },
 
   // ---------- TECLADO MECANICO ----------
   {
     id: 5,
     name: "Teclado Mecánico RGB",
-    description: "Teclado mecánico inalámbrico RGB",
-    price: 180000,
+    description: "Teclado mecánico inalámbrico RGB Formato 60% con dimensiones de 29.2 cm de ancho que libera espacio en el escritorio para movimientos amplios del ratón,Interruptores Gateron Red lineales que requieren menor fuerza de actuación para pulsaciones rápidas y fluidas,tecnología anti-ghosting que permite el registro simultáneo de múltiples teclas durante secuencias complejas.",
+    price: 120000,
     condition: "nuevo",
     image: "/images/teclado-1.png",
     available: true
@@ -72,7 +72,7 @@ export const products = [
   {
     id: 7,
     name: "Hub USB 7 Puertos",
-    description: "Hub USB 3.0 con alimentación externa",
+    description: "Aluminio 7 en 1 USB C y USB Hub con USB 3.0, puertos USB 2.0 para PC/portátiles/MacBook Pro/Air/iMac/iPad y más dispositivos",
     price: 120000,
     condition: "nuevo",
     image: "/images/hub-7-puertos.png",
@@ -84,7 +84,7 @@ export const products = [
   {
     id: 9,
     name: "Audífonos Xiaomi",
-    description: "Audífonos inalámbricos Xiaomi con Bluetooth color negros",
+    description: "Audífonos inalámbricos Xiaomi con Bluetooth color negros,5 modos de ecualización,Batería de duración ultralarga de 36 horas,Reducción de ruido por IA para llamadas",
     price: 99000,
     condition: "nuevo",
     image: "/images/audifonos-xiaomi.png",
@@ -96,10 +96,10 @@ export const products = [
     id: 10,
     name: "Monitor 22 pulgadas",
     description: "Monitor HD ideal para oficina y hogar",
-    price: 320000,
+    price: 280000,
     condition: "usado",
     image: "/images/monitor2-1.png",
-    available: true
+    available: false
   },
 
   // ---------- MOUSE G1 (carrusel de 3 fotos) ----------
