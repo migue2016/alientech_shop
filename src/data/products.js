@@ -105,9 +105,9 @@ export const products = [
   // ---------- MOUSE G1 (carrusel de 3 fotos) ----------
   {
     id: 11,
-    name: "Mouse G1",
-    description: "Mouse gaming G1 con luces RGB",
-    price: 85000,
+    name: "Mouse inalámbrico ",
+    description: "Mouse inalambrico Ajazz v2 con luces RGB,Conectividad dual mediante Bluetooth 5.0 y tecnología inalámbrica 2.4GHz para alternar entre dispositivos,Velocidad máxima de 300 ips que mantiene el seguimiento del cursor ante desplazamientos rápidos sobre la superficie.",
+    price: 110000,
     condition: "nuevo",
     images: ["/images/mouse-g1-3.png", "/images/mouse-g1-1.png", "/images/mouse-g1-2.png"],
     available: true
@@ -116,8 +116,8 @@ export const products = [
   // ---------- RATON INALAMBRICO (carrusel de 2 fotos) ----------
   {
     id: 12,
-    name: "Ratón Inalámbrico",
-    description: "Ratón inalámbrico silencioso plug and play",
+    name: "Mouse Inalámbrico Bluetooth ",
+    description: "Lleva tu experiencia de juego al siguiente nivel con el AJAZZ NJ08 MC, un mouse diseñado para gamers y usuarios que buscan precisión, comodidad y versatilidad. Gracias a su conexión Tri-Mode, podrás utilizarlo de forma inalámbrica mediante Bluetooth o receptor 2.4 GHz, así como por cable USB-C cuando necesites máxima estabilidad.",
     price: 60000,
     condition: "nuevo",
     images: ["/images/raton-1.png", "/images/raton-2.png"],
@@ -127,9 +127,9 @@ export const products = [
   // ---------- HUB 5 PUERTOS (carrusel de 2 fotos) ----------
   {
     id: 13,
-    name: "Hub USB 5 Puertos",
-    description: "Hub USB de 5 puertos multipuerto",
-    price: 90000,
+    name: "Hub USB 4 Puertos",
+    description: "Acer - Hub USB de 4 puertos, hub múltiple USB 3.0, divisor USB A para portátil con puerto de alimentación USB C, extensor USB para portátil de puerto A, Windows, Linux, PC Acer y más ",
+    price: 70000,
     condition: "nuevo",
     images: ["/images/hub5-2.png", "/images/hub5-1.png"],
     available: true
@@ -138,9 +138,9 @@ export const products = [
   // ---------- IPHONE ----------
   {
     id: 14,
-    name: "iPhone",
-    description: "Teléfono inteligente Apple iPhone",
-    price: 1500000,
+    name: "Adaptador Para Auricular iPhone",
+    description: "Este cable es ideal para conectar tus dispositivos de manera fácil y sencilla. Así, podrás transferir tus datos en pocos pasos y de manera segura y confiable.",
+    price: 15000,
     condition: "nuevo",
     image: "/images/iphone.png",
     available: true
@@ -149,8 +149,8 @@ export const products = [
   // ---------- KIT GAMER (carrusel de 4 fotos) ----------
   {
     id: 15,
-    name: "Kit Gamer",
-    description: "Combo de accesorios para gamers",
+    name: "Mouse Gamer Havit MS954 RGB Negro",
+    description: "Mouse Gamer RGB – Precisión y Estilo para Ganar Cada Partida Domina tus juegos con este mouse gamer diseñado para ofrecer precisión extrema, durabilidad y un diseño que complementa cualquier setup. Con una iluminación LED RGB personalizable, este mouse no solo destaca por su rendimiento, sino también por su estilo único. Características principales -Resolución ajustable: Configura entre 800, 1600, 2400, 3200, 6400 y hasta 12000 DPI para adaptarte a cualquier estilo de juego, desde precisión milimétrica hasta movimientos rápidos. -7 teclas programables: Mayor control y personalización para tus estrategias.",
     price: 250000,
     condition: "nuevo",
     images: ["/images/gamer-1.png", "/images/gamer-2.png", "/images/gamer-3.png", "/images/gamer-4.png"],

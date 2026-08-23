@@ -16,66 +16,127 @@ function conditionPill(condition) {
     : '<span class="inline-flex shrink-0 items-center rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700">Nuevo</span>';
 }
 
-function descriptionBlock(text) {
-  const desc = String(text || '');
-  if (desc.length <= 90) {
-    return `<p class="mt-2 text-sm leading-relaxed text-slate-500">${desc}</p>`;
-  }
-  return `
-    <div data-desc-wrap data-expanded="false" class="mt-2">
-      <div class="relative max-h-[4.5rem] overflow-hidden transition-[max-height] duration-300" data-desc-box>
-        <p class="text-sm leading-relaxed text-slate-500">${desc}</p>
-        <div data-desc-fade class="pointer-events-none absolute inset-x-0 bottom-0 h-7 bg-gradient-to-t from-white to-transparent"></div>
-      </div>
-      <button type="button" data-desc-toggle aria-expanded="false" class="mt-1.5 inline-flex items-center gap-1 rounded-md text-xs font-semibold text-blue-600 transition hover:text-blue-800">
-        <span data-desc-label>Ver más</span>
-        <svg data-desc-chevron class="h-3.5 w-3.5 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-      </button>
-    </div>`;
-}
-
-export function setupDescriptionToggles(root = document) {
-  root.querySelectorAll('[data-desc-toggle]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const wrap = btn.closest('[data-desc-wrap]');
-      if (!wrap) return;
-      const box = wrap.querySelector('[data-desc-box]');
-      const fade = wrap.querySelector('[data-desc-fade]');
-      const label = btn.querySelector('[data-desc-label]');
-      const chevron = btn.querySelector('[data-desc-chevron]');
-      const expanded = wrap.dataset.expanded === 'true';
-      wrap.dataset.expanded = String(!expanded);
-      box.classList.toggle('max-h-[4.5rem]', expanded);
-      box.classList.toggle('overflow-hidden', expanded);
-      fade?.classList.toggle('hidden', !expanded);
-      label.textContent = expanded ? 'Ver más' : 'Ver menos';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      chevron.classList.toggle('rotate-180', !expanded);
-    });
-  });
-}
-
 export function createProductCard(product) {
   const link = generateProductWhatsAppLink(product);
   const label = product.available ? 'Comprar por WhatsApp' : 'Consultar disponibilidad';
   return `
-    <article class="card group reveal">
+    <article class="card group reveal cursor-pointer" data-product-id="${product.id}" tabindex="0" aria-label="Ver detalles de ${product.name}">
       ${productMedia(product)}
       <div class="flex flex-1 flex-col p-5">
         <div class="flex items-start justify-between gap-3">
-          <h3 class="font-semibold leading-snug text-slate-900">${product.name}</h3>
+          <h3 class="font-semibold leading-snug text-slate-900 transition-colors group-hover:text-blue-700">${product.name}</h3>
         </div>
-        ${descriptionBlock(product.description)}
+        <p class="mt-2 line-clamp-2 text-sm leading-relaxed text-slate-500">${product.description}</p>
         <div class="mt-auto pt-4">
           <div class="flex flex-wrap items-center gap-2">
             ${conditionPill(product.condition)}
             ${statusPill(product.available)}
           </div>
           <p class="mt-2 text-lg font-bold tracking-tight text-blue-600">${formatPrice(product.price)}</p>
-          <a href="${link}" target="_blank" rel="noopener" class="btn-whatsapp mt-4 w-full !px-4 !py-2.5 !text-xs">${WA_ICON}${label}</a>
+          <a href="${link}" data-wa target="_blank" rel="noopener" class="btn-whatsapp mt-4 w-full !px-4 !py-2.5 !text-xs">${WA_ICON}${label}</a>
         </div>
       </div>
     </article>`;
+}
+
+function ensureModalRoot() {
+  let root = document.getElementById('product-modal');
+  if (root) return root;
+  root = document.createElement('div');
+  root.id = 'product-modal';
+  root.className = 'fixed inset-0 z-[100] hidden';
+  root.setAttribute('role', 'dialog');
+  root.setAttribute('aria-modal', 'true');
+  root.innerHTML = `
+    <div data-overlay class="absolute inset-0 bg-slate-950/70 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div class="pointer-events-none absolute inset-0 flex items-end justify-center sm:items-center sm:p-6">
+      <div data-dialog class="pointer-events-auto relative max-h-[92vh] w-full max-w-3xl translate-y-8 scale-[0.98] overflow-y-auto overscroll-contain rounded-t-3xl bg-white opacity-0 shadow-2xl ring-1 ring-slate-900/5 transition-all duration-300 sm:translate-y-0 sm:rounded-3xl"></div>
+    </div>`;
+  document.body.appendChild(root);
+  root.querySelector('[data-overlay]').addEventListener('click', closeProductModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeProductModal();
+  });
+  return root;
+}
+
+export function openProductModal(product) {
+  const root = ensureModalRoot();
+  const overlay = root.querySelector('[data-overlay]');
+  const dialog = root.querySelector('[data-dialog]');
+  const images = Array.isArray(product.images) && product.images.length ? product.images : [product.image];
+  const soldOut = product.available === false;
+  const mediaHtml = images.length > 1
+    ? productMedia(product)
+    : `<div class="relative aspect-[4/3] overflow-hidden bg-slate-100 p-2"><img src="${assetUrl(images[0])}" alt="${product.name}" draggable="false" class="h-full w-full rounded-lg bg-white object-contain ${soldOut ? 'grayscale opacity-75' : ''}">${soldOut ? soldOutBadge() : ''}</div>`;
+  const link = generateProductWhatsAppLink(product);
+  const waLabel = product.available ? 'Comprar por WhatsApp' : 'Consultar disponibilidad';
+  dialog.innerHTML = `
+    <button type="button" data-close aria-label="Cerrar detalles" class="absolute right-3 top-3 z-20 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-slate-600 shadow-md ring-1 ring-slate-200 backdrop-blur transition hover:text-slate-900">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="grid md:grid-cols-2">
+      <div class="group relative">${mediaHtml}</div>
+      <div class="flex flex-col gap-4 p-6 lg:p-8">
+        <div class="flex flex-wrap items-center gap-2">
+          ${conditionPill(product.condition)}
+          ${statusPill(product.available)}
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-blue-600">Detalle del producto</p>
+          <h3 class="mt-1 text-2xl font-bold leading-tight tracking-tight text-slate-900">${product.name}</h3>
+        </div>
+        <p class="text-3xl font-extrabold tracking-tight text-blue-600">${formatPrice(product.price)}</p>
+        <div class="rounded-xl bg-slate-50 p-4 ring-1 ring-slate-200/70">
+          <p class="text-sm font-semibold text-slate-900">Descripción</p>
+          <p class="mt-1 whitespace-pre-line text-sm leading-relaxed text-slate-500">${product.description || 'Consúltanos por WhatsApp para más información.'}</p>
+        </div>
+        <a href="${link}" target="_blank" rel="noopener" class="btn-whatsapp mt-auto w-full">${WA_ICON}${waLabel}</a>
+      </div>
+    </div>`;
+  dialog.querySelector('[data-close]').addEventListener('click', closeProductModal);
+  dialog.querySelectorAll('[data-prev], [data-next]').forEach((btn) => btn.classList.remove('opacity-0'));
+  root.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => {
+    overlay.classList.remove('opacity-0');
+    dialog.classList.remove('opacity-0', 'translate-y-8', 'scale-[0.98]');
+  });
+  setupCarousels(dialog);
+}
+
+export function closeProductModal() {
+  const root = document.getElementById('product-modal');
+  if (!root || root.classList.contains('hidden')) return;
+  const overlay = root.querySelector('[data-overlay]');
+  const dialog = root.querySelector('[data-dialog]');
+  overlay.classList.add('opacity-0');
+  dialog.classList.add('opacity-0', 'translate-y-8', 'scale-[0.98]');
+  window.setTimeout(() => {
+    root.classList.add('hidden');
+    document.body.style.overflow = '';
+  }, 280);
+}
+
+export function setupProductModals(items) {
+  const grid = document.getElementById('products-grid');
+  if (!grid) return;
+  const map = new Map(items.map((p) => [Number(p.id), p]));
+  grid.addEventListener('click', (e) => {
+    if (e.target.closest('a, button')) return;
+    const card = e.target.closest('[data-product-id]');
+    if (!card) return;
+    const product = map.get(Number(card.dataset.productId));
+    if (product) openProductModal(product);
+  });
+  grid.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter') return;
+    if (e.target.closest('a, button')) return;
+    const card = e.target.closest('[data-product-id]');
+    if (!card || document.activeElement !== card) return;
+    const product = map.get(Number(card.dataset.productId));
+    if (product) openProductModal(product);
+  });
 }
 
 const SERVICE_ICONS = {
